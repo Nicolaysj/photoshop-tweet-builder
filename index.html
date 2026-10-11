@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section>
+    <sp-heading size="XS">Profile</sp-heading>
+    <div class="row">
+      <sp-textfield id="lookupInput" class="grow" placeholder="@handle or tweet link"></sp-textfield>
+      <sp-button id="lookupBtn" variant="secondary" size="s">Fetch</sp-button>
+    </div>
+    <sp-detail id="lookupStatus" class="status"></sp-detail>
+
+    <div class="row">
+      <sp-picker id="profilePicker" class="grow" placeholder="Saved profiles" size="s">
+        <sp-menu slot="options" id="profileMenu"></sp-menu>
+      </sp-picker>
+      <sp-action-button id="saveProfileBtn" size="s" title="Save profile">Save</sp-action-button>
+      <sp-action-button id="deleteProfileBtn" size="s" title="Delete saved profile">Delete</sp-action-button>
+    </div>
+
+    <div class="profile">
+      <div class="avatar-col">
+        <img id="avatarImg" class="avatar" />
+        <sp-action-button id="avatarBtn" size="s" quiet>Change…</sp-action-button>
+      </div>
+      <div class="grow">
+        <sp-label>Display name</sp-label>
+        <sp-textfield id="nameInput"></sp-textfield>
+        <sp-label>Handle</sp-label>
+        <sp-textfield id="handleInput"></sp-textfield>
+        <sp-checkbox id="verifiedInput" checked>Verified</sp-checkbox>
+      </div>
+    </div>
+  </section>
+
+  <sp-divider size="small"></sp-divider>
+
+  <section>
+    <sp-heading size="XS">Tweet</sp-heading>
+    <sp-textarea id="textInput"></sp-textarea>
+    <div class="row counts">
+      <div><sp-label>Time</sp-label><sp-textfield id="timeInput" value="1m"></sp-textfield></div>
+      <div><sp-label>Replies</sp-label><sp-textfield id="repliesInput"></sp-textfield></div>
+      <div><sp-label>Retweets</sp-label><sp-textfield id="retweetsInput"></sp-textfield></div>
+      <div><sp-label>Likes</sp-label><sp-textfield id="likesInput"></sp-textfield></div>
+    </div>
+  </section>
+
+  <sp-divider size="small"></sp-divider>
+
+  <div class="footer">
+    <div class="row">
+      <sp-button id="insertBtn" class="grow" variant="cta">Insert tweet</sp-button>
+      <sp-button id="updateBtn" class="grow" variant="secondary" disabled>Update selected</sp-button>
+    </div>
+    <sp-detail id="insertStatus" class="status"></sp-detail>
+  </div>
+
+  <sp-divider size="small"></sp-divider>
+
+  <section>
+    <div class="row between">
+      <sp-action-button id="styleToggle" size="s" quiet>Style ▸</sp-action-button>
+      <sp-action-button id="resetStyleBtn" size="s" quiet>Reset</sp-action-button>
+    </div>
+    <div id="styleBody" class="style-body">
+      <sp-slider id="sizePct" min="40" max="250" step="5" value="100" show-value="true">
+        <sp-label slot="label">Size (%)</sp-label>
+      </sp-slider>
+      <sp-slider id="bodyScale" min="1" max="2.5" step="0.05" value="1.7" show-value="true">
+        <sp-label slot="label">Tweet text size (× header)</sp-label>
+      </sp-slider>
+      <sp-slider id="wrapWidth" min="10" max="40" step="1" value="24" show-value="true">
+        <sp-label slot="label">Line width</sp-label>
+      </sp-slider>
+      <sp-slider id="radiusPct" min="0" max="50" step="1" value="17" show-value="true">
+        <sp-label slot="label">Corner roundness</sp-label>
+      </sp-slider>
+      <div class="row">
+        <sp-slider id="tilt" class="grow" min="-15" max="15" step="0.5" value="0" show-value="true">
+          <sp-label slot="label">Tilt (°)</sp-label>
+        </sp-slider>
+        <sp-action-button id="randomTiltBtn" size="s" title="Random tilt">Random</sp-action-button>
+      </div>
+      <sp-checkbox id="shadow" checked>Drop shadow</sp-checkbox>
+      <sp-detail class="hint">Tilt and drop shadow apply when inserting. Updating keeps the selected card's own transform and effects.</sp-detail>
+    </div>
+  </section>
+
+  <script src="src/main.js"></script>
+</body>
+</html>
