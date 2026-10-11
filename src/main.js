@@ -345,7 +345,14 @@ async function init() {
   await refreshSelection();
   watchSelection();
 
-  require("./src/dev.js").start({ insert, update, refreshSelection, getSelectedTweet: () => selectedTweet });
+  // The dev harness isn't shipped in release packages.
+  let dev = null;
+  try {
+    dev = require("./src/dev.js");
+  } catch (e) {
+    dev = null;
+  }
+  if (dev) dev.start({ insert, update, refreshSelection, getSelectedTweet: () => selectedTweet });
 }
 
 init().catch((e) => console.error(e));

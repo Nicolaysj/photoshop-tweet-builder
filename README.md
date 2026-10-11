@@ -30,8 +30,24 @@ tweet-link fetch.</sub>
 
 ## Install
 
-Tweet Builder isn't on the Adobe marketplace yet, so it's loaded from source with Adobe's
-free UXP Developer Tool.
+1. Download **[Tweet-Builder.ccx](https://github.com/Nicolaysj/photoshop-tweet-builder/releases/latest/download/Tweet-Builder.ccx)**
+   from the [latest release](https://github.com/Nicolaysj/photoshop-tweet-builder/releases/latest).
+2. Double-click the file. Creative Cloud opens and installs it. It will warn that the plugin
+   isn't verified by Adobe, because it's shared here rather than through the Adobe
+   marketplace. Click **Install** to continue.
+3. In Photoshop, open **Plugins → Tweet Builder**. If Photoshop was already open and the menu
+   item doesn't appear, restart Photoshop.
+
+To update, download the newer `.ccx` and double-click it again. To remove the plugin, use
+**Manage plugins** in the Creative Cloud desktop app.
+
+Requirements: Photoshop 2024 (v25) or newer. Tested on Photoshop 2026 on Windows. Cards use
+the Segoe UI font, which comes with Windows; on macOS, Photoshop substitutes another font
+unless Segoe UI is installed.
+
+### Install from source
+
+To run the latest code or work on the plugin itself:
 
 1. Download this repo: **Code → Download ZIP**, then unzip it (or `git clone` it).
 2. Install **UXP Developer Tool** from the Creative Cloud app (search for "UXP").
@@ -39,11 +55,8 @@ free UXP Developer Tool.
    Photoshop.
 4. In UXP Developer Tool, click **Add Plugin**, choose this folder's `manifest.json`, then
    click **Load** under ••• (Actions).
-5. In Photoshop, open **Plugins → Tweet Builder**.
 
-Requirements: Photoshop 2024 (v25) or newer. Tested on Photoshop 2026 on Windows. Cards use
-the Segoe UI font, which comes with Windows; on macOS, Photoshop substitutes another font
-unless Segoe UI is installed.
+A copy loaded this way keeps its saved profiles separately from an installed `.ccx` copy.
 
 ## How to use it
 
