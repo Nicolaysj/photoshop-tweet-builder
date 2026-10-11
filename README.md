@@ -2,6 +2,10 @@
 
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nixolay)
 
+[![Downloads](https://img.shields.io/github/downloads/Nicolaysj/photoshop-tweet-builder/total?label=downloads&color=1d9bf0)](https://github.com/Nicolaysj/photoshop-tweet-builder/releases)
+[![Latest release](https://img.shields.io/github/v/release/Nicolaysj/photoshop-tweet-builder?label=latest)](https://github.com/Nicolaysj/photoshop-tweet-builder/releases/latest)
+[![Stars](https://img.shields.io/github/stars/Nicolaysj/photoshop-tweet-builder?style=flat)](https://github.com/Nicolaysj/photoshop-tweet-builder/stargazers)
+
 A Photoshop panel that builds tweet cards for YouTube thumbnails. You don't need to screenshot
 a web generator, upscale a blurry JPG and mask it by hand: paste a tweet link (or type your
 own) and click **Insert**. The card is built from real text and vector layers, so it stays
